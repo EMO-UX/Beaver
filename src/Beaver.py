@@ -8,7 +8,6 @@ if not os.path.exists(savefile):
         pass
  # إدخال البيانات من المستخدم
 def input_function():
-   global row1,row2,row3,row4
    row1 = input(" Username: ")
    row2 = input(" Secure Password: ")
    row3 = input(" Service Name: ")
