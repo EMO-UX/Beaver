@@ -1,5 +1,6 @@
 import csv
-import os 
+import os
+
 
 savefile = "savefile.csv"
 # التحقق من وجود الملف، وإذا لم يكن موجودًا يتم إنشاؤه
@@ -26,23 +27,23 @@ def read_function():
     with open("savefile.csv",'r',newline='') as read_savefile:
         reader = csv.reader(read_savefile)
         for line in reader:
-            print(f" {count} - {(' / ').join(line)} ")
+            print(f"{count} - {(' / ').join(line)} ")
             count += 1            
 
 # حذف سطر معين بناءً على رقم السطر
 def delete_function():
     try:
-        delete_Number = int(input("Enter the number of the line you want to delete it : "))
+        delete_Number = int(input("Enter the number of the line you want to delete it :"))
         with open("savefile.csv",'r',newline='') as delete_file:
             lines = list(csv.reader(delete_file))
-            if 1<= delete_Number < len(lines):
+            if 0<= delete_Number <= len(lines):
                 del lines[delete_Number - 1]
                 print("Deleted successfully")
                 with open("savefile.csv",'w',newline='') as newfile:        
                     writer = csv.writer(newfile)
                     writer.writerows(lines)
             else:
-                print("Number of line is uncorect")
+                print("Number of line is uncorect ")
     except ValueError:
         print("Please enter a valid number.")
 
@@ -51,6 +52,7 @@ def delete_function():
 #delete_fuction()
 while True:
     c_input = input("\nOptions: Read, Add, Delete, or Exit : ").lower().replace(" ","")
+    print("")
     if c_input == ("add"):
         ithems = input_function()
         add_function(ithems)
