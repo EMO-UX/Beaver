@@ -30,5 +30,5 @@ cp Beaver.py /home/user/.local/bin
 
 ### 6. you can now run it via Command
 ```bash
-Beaver
+Beaver.py
 ```
