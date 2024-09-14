@@ -18,20 +18,36 @@ ls
 
 ### 3. Extract the file
 ```bash
-tar -xf Beaver-Script.tar.xz
+tar -xf Beaver.tar.xz
 ```
-### 4. Move the Beaver folder to any location you want, either manually or using 
+### 4. cd to folder 
+```bash
+cd Beaver
+chmod +x Beaver.py
+cd ..
+```
+###
+### 5. Move the Beaver folder to any location you want, either manually or using 
 ```bash
 sudo mv Beaver /path/you/want
 ``` 
-### 5. Go to the Beaver folder and open a terminal .
+### 6. Go to the Beaver folder and copy the new path of folder 
 
-### 6. copy Beaver.py file to /home/your_username/.local/bin 
+### 7. open terminal and add a command 
 ```bash
-sudo cp Beaver.py /home/your_username/.local/bin
+nano ~/.bashrc 
 ```
-
+### 8. Scroll to the bottom of the file and add
+```bash
+alias Beaver='cd /New/path/of/beaver/folder && python3 Beaver.py'
+```
+### 9. Save it and exit
+In nano, save the file by pressing CTRL + O, then Enter to confirm. Exit by pressing CTRL + X.
+### 10. Apply the changes
+```bash
+source ~/.bashrc
+```
 ### Now you can run it using the command
 ```bash
-Beaver.py
+Beaver
 ```
