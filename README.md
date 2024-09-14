@@ -4,9 +4,9 @@
 
  Right now, the tool doesnt **encrypt** the information it stores. Were working on adding encryption to keep your data safe on your device. If youre good at programming, you can help add this feature too. 
 ___
-## How to Download it for linux
+## How to Download it 
 
-### 1.  Download **Beaver-app.tar.xz**
+### 1.  Download **Beaver-Script.tar.xz**
 
 ### 2. Go to Downloads
 ```bash
@@ -16,19 +16,22 @@ cd ~/Downloads
 ls
 ```
 
-### 3. Extract it
+### 3. Extract the file
 ```bash
-tar -xf Beaver-app.tar.xz
+tar -xf Beaver-Script.tar.xz
 ```
-### 4. copy Beaver folder anywhere you want 
-
-### 5. copy Beaver.py file to /home/user/.local/bin 
+### 4. Move the Beaver folder to any location you want, either manually or using 
 ```bash
-cp Beaver.py /home/user/.local/bin
-```
-**change /user/ with your username**
+sudo mv Beaver /path/you/want
+``` 
+### 5. Go to the Beaver folder and open a terminal .
 
-### 6. you can now run it via Command
+### 6. copy Beaver.py file to /home/your_username/.local/bin 
+```bash
+sudo cp Beaver.py /home/your_username/.local/bin
+```
+
+### Now you can run it using the command
 ```bash
 Beaver.py
 ```
